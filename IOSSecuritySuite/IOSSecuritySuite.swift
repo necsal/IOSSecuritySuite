@@ -11,7 +11,7 @@ import Foundation
 import MachO
 
 @available(iOSApplicationExtension, unavailable)
-public class IOSSecuritySuite {
+@objc public class IOSSecuritySuite : NSObject {
 
     /**
      This type method is used to determine the true/false jailbreak status
@@ -21,7 +21,7 @@ public class IOSSecuritySuite {
      let isDeviceJailbroken: Bool = IOSSecuritySuite.amIJailbroken()
      ```
      */
-    public static func amIJailbroken() -> Bool {
+    @objc public static func amIJailbroken() -> Bool {
         return JailbreakChecker.amIJailbroken()
     }
 
